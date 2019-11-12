@@ -86,15 +86,17 @@ body { /*class .content */
 	
 	.conteiner .content {
 		grid-area: content;
+		color: #000;
 		text-align: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		
 	}
 	
 	.conteiner .sidebar { /* Seccion de SOFT SKILLS */
 		grid-column: 3 / 4;
-		background: #faa43d;
+		background: hsl(352, 91%, 91%);
 		text-align: center;
 		display: flex;
 		align-items: center;
@@ -111,7 +113,7 @@ body { /*class .content */
 	.conteiner .widget-1, 
 	.conteiner .widget-2,
 	.conteiner .widget-3 {
-		background: #55a8fd;
+		background: #76b1f5;
 		color: #fff;
 		height: 100px;
 		text-align: center;
@@ -148,7 +150,8 @@ body { /*class .content */
 								"widget-1 widget-2 widget-3"
 								"technologies technologies technologies"
 								"footer footer footer";
-		/* } */
+			display: grid;
+		}
 	
 	}
 	
