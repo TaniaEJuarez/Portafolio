@@ -17,35 +17,46 @@ body { /*class .content */
 
 .social {
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0; /* Establecemos la barra en la izquierda */
+	right: 0;  /* Establecemos la barra en la izquierda */
 	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 
 	.social ul {
-		list-style: none;
+		list-style: none; /* Indica si queremos que la lista sea numerada con algun tipo de viñeta */
 	}
 
 	.social ul li a {
 		display: inline-block;
-		color:#fff;
-		background: #000;
-		padding: 10px 15px;
+		color:#000;
+		background: none;
+		padding: 20px 45px;
 		text-decoration: none;
 		-webkit-transition:all 500ms ease;
 		-o-transition:all 500ms ease;
 		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
 	}
 
-	/* .social ul li .icon-facebook2 {background:#3b5998;} Establecemos los colores de cada red social, aprovechando su class */
-	/* .social ul li .icon-icon-linkedin {background: #00abf0;}
-	.social ul li .icon-icon-mail {background: #d95232;}
-	.social ul li .icon-whatsapp {background: #ae181f;}
-	.social ul li .icon-github {background: #666666;} */
+	    .social ul li a.icon-linkedin {
+			background-image: url(/Users/tania2/Documents/PortafolioGitHub/assets/Linkedin.png);
+			background-repeat: no-repeat;
+		}
+		.social ul li a.icon-github {
+			background-image: url(https://icongr.am/devicon/github-original.svg);
+			background-repeat: no-repeat;
+		}
+		.social ul li a.icon-mail {
+			background-image: url(https://icongr.am/entypo/mail-with-circle.svg);
+			background-repeat: no-repeat;
+		}
+		.social ul li a.icon-whatsapp {
+		background-image: url(/Users/tania2/Documents/PortafolioGitHub/assets/whatsapp-black_100119.png);
+		background-repeat: no-repeat;
+		}
 
 	.social ul li a:hover {
 		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		padding: 20px 45px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 	}
 
 	.conteiner {
