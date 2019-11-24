@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body { /*class .content */
+    background-image : url("/Users/tania2/Documents/PortafolioGitHub/assets/background.png");
+    background-repeat: no-repeat;
+}
+
+.myname {
+    font-style: normal;
+    font-size: 60px;  
+    text-decoration-color: #000;
+    text-align: left;
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	/* .social ul li .icon-facebook2 {background:#3b5998;} Establecemos los colores de cada red social, aprovechando su class */
+	/* .social ul li .icon-icon-linkedin {background: #00abf0;}
+	.social ul li .icon-icon-mail {background: #d95232;}
+	.social ul li .icon-whatsapp {background: #ae181f;}
+	.social ul li .icon-github {background: #666666;} */
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+	.conteiner {
+		width: 90%;
+		max-width: 1000px;
+		margin: 20px auto;
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: repeat(4, auto);
+	
+		grid-template-areas: "header header header"
+							 "content content sidebar"
+							 "widget-1 widget-2 widget-3"
+							 "technologies technologies technologies"
+							 "footer footer footer"
+	}
+	
+	.conteiner > div,
+	.conteiner .header,
+	.conteiner .content,
+	.conteiner .sidebar,
+	.conteiner .technologies,
+	.conteiner .footer {
+		background: #fff;
+		padding: 20px;
+		border-radius: 4px;
+	}
+	
+	.conteiner .header {
+		background: none;
+		color: #000 rgb(172, 164, 164);
+		grid-area: header; /* aqui indicamos el nombre del area que le dimos en el conteiner en grid-template-areas */
+	}
+	
+	.conteiner .content {
+		grid-area: content;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+	
+	.conteiner .sidebar { /* Seccion de SOFT SKILLS */
+		grid-column: 3 / 4;
+		background: hsl(352, 91%, 91%);
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100px;
+		grid-area: sidebar;
+	  
+	}
+
+	.conteiner .technologies {
+		grid-area: technologies;
+		display: -moz-grid-group;
+		align-items: center;
+		justify-content: center;		
+	}
+
+	.conteiner .technologies .iconTech {
+		/* width: 90%; */
+		margin: 20px auto;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 1px; /*espaciados entre cada elemento*/
+		grid-template-columns: repeat(6, 1fr); /* Definimos el no. de columnas que quiero tener. En este caso son 3 */
+		grid-auto-rows: repeat(2, auto); /* Definimos no. de filas y el tamaño en automatico */
+		grid-template-areas: "iconTech iconTech iconTech iconTech iconTech iconTech" /*con grid template areas, determinamos la distribucion y el layout de la app */
+							 "iconTech iconTech iconTech iconTech iconTech iconTech"
+	}
+	
+	.conteiner .widget-1, 
+	.conteiner .widget-2,
+	.conteiner .widget-3 {
+		background: #76b1f5;
+		color: #fff;
+		height: 100px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.conteiner .widget-1 {
+		grid-area: widget-1;
+	}
+	
+	.conteiner .widget-2 {
+		grid-area: widget-2;
+	}
+
+	.conteiner .widget-3 {
+		grid-area: widget-3;
+	}
+	
+	.conteiner .footer{
+		background: #12203E;
+		color: #fff;
+	    grid-area: footer;
+	}
+	
+	/*** RESPONSIVE ***/
+
+	@media screen and (max-width: 768px) { /* 768px es el tamaño de un dispositivo. A partir de esta medida, el sitio cambia de estructura responsivamente */
+		.conteiner {
+			grid-template-areas: "header header header" /* Redefino el layout del sitio, de acuerdo al media query */
+								"content content content"
+								"sidebar sidebar sidebar"
+								"technologies technologies technologies"
+								"widget-1 widget-2 widget-3"
+								"footer footer footer";
+			display: grid;
+		}
+	
+	}
+	
