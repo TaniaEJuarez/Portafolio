@@ -4,7 +4,7 @@
 }
 
 body { /*class .content */
-    background-image : url("background.png");
+    background-image : url("/Users/tania2/Documents/PortafolioGitHub/assets/background.png");
     background-repeat: no-repeat;
 }
 
@@ -78,7 +78,7 @@ body { /*class .content */
 	.conteiner .header {
 		background: none;
 		color: #000 rgb(172, 164, 164);
-		grid-area: header;
+		grid-area: header; /* aqui indicamos el nombre del area que le dimos en el conteiner en grid-template-areas */
 	}
 	
 	.conteiner .content {
@@ -87,11 +87,12 @@ body { /*class .content */
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		
 	}
 	
-	.conteiner .sidebar {
+	.conteiner .sidebar { /* Seccion de SOFT SKILLS */
 		grid-column: 3 / 4;
-		background: #faa43d;
+		background: hsl(352, 91%, 91%);
 		text-align: center;
 		display: flex;
 		align-items: center;
@@ -100,11 +101,31 @@ body { /*class .content */
 		grid-area: sidebar;
 	  
 	}
+
+	.conteiner .technologies {
+		grid-area: technologies;
+		display: -moz-grid-group;
+		align-items: center;
+		justify-content: center;		
+	}
+
+	.conteiner .technologies .iconTech {
+		/* width: 90%; */
+		margin: 20px auto;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 1px; /*espaciados entre cada elemento*/
+		grid-template-columns: repeat(6, 1fr); /* Definimos el no. de columnas que quiero tener. En este caso son 3 */
+		grid-auto-rows: repeat(2, auto); /* Definimos no. de filas y el tamaño en automatico */
+		grid-template-areas: "iconTech iconTech iconTech iconTech iconTech iconTech" /*con grid template areas, determinamos la distribucion y el layout de la app */
+							 "iconTech iconTech iconTech iconTech iconTech iconTech"
+	}
 	
 	.conteiner .widget-1, 
 	.conteiner .widget-2,
 	.conteiner .widget-3 {
-		background: #55a8fd;
+		background: #76b1f5;
 		color: #fff;
 		height: 100px;
 		text-align: center;
@@ -125,38 +146,24 @@ body { /*class .content */
 		grid-area: widget-3;
 	}
 	
-	.conteiner .technologies {
-		text-align: center;
-		display: grid;
-		align-items: center;
-		justify-content: center;
-		grid-area: technologies;
-	}
 	.conteiner .footer{
 		background: #12203E;
 		color: #fff;
-	   grid-area: footer;
+	    grid-area: footer;
 	}
 	
-	@media screen and (max-width: 768px) {
+	/*** RESPONSIVE ***/
+
+	@media screen and (max-width: 768px) { /* 768px es el tamaño de un dispositivo. A partir de esta medida, el sitio cambia de estructura responsivamente */
 		.conteiner {
-			grid-template-areas: "header header header"
-							 "content content content"
-							 "sidebar sidebar sidebar"
-							 "widget-1 widget-2 widget-3"
-							 "technologies"
-							 "abilities"
-							 "footer footer footer";
+			grid-template-areas: "header header header" /* Redefino el layout del sitio, de acuerdo al media query */
+								"content content content"
+								"sidebar sidebar sidebar"
+								"technologies technologies technologies"
+								"widget-1 widget-2 widget-3"
+								"footer footer footer";
+			display: grid;
 		}
 	
-	}
-
-	.technologies {
-		height: 200px;
-		width: 100px;
-		text-align: center;
-		display: flexbox;
-		align-items: center;
-		justify-content: center;
 	}
 	
