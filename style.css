@@ -17,24 +17,27 @@ body { /*class .content */
 
 .social {
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	right: 0;  /* Establecemos la barra en la izquierda */
+	right: 0;  /* Establecemos la barra en la derecha */
 	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 
 	.social ul {
-		list-style: none; /* Indica si queremos que la lista sea numerada con algun tipo de viñeta */
+		list-style: none; /* Indica si queremos que la lista con los iconos, sea numerada con algun tipo de viñeta */
+		
 	}
 
 	.social ul li a {
 		display: inline-block;
 		color:#000;
 		background: none;
-		padding: 20px 45px;
+		padding: 20px 20px;
 		text-decoration: none;
-		-webkit-transition:all 500ms ease;
-		-o-transition:all 500ms ease;
+		/* -webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease; */
 		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+		-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+		transition: width 15s, height 2s, transform 2s;
 	}
 
 	    .social ul li a.icon-linkedin {
@@ -55,9 +58,12 @@ body { /*class .content */
 		}
 
 	.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 20px 45px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		/* background: #000; Cambiamos el fondo cuando el usuario pase el mouse */
+		/* padding: 20px 45px; Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		-webkit-transform: rotate(90deg); /* Safari */
+		transform: rotate(90deg);
 	}
+
 
 	.conteiner {
 		width: 90%;
@@ -70,8 +76,8 @@ body { /*class .content */
 	
 		grid-template-areas: "header header header"
 							 "content content sidebar"
-							 "widget-1 widget-2 widget-3"
 							 "technologies technologies technologies"
+							 "widget-1 widget-2 widget-3"
 							 "footer footer footer"
 	}
 	
@@ -113,25 +119,13 @@ body { /*class .content */
 	  
 	}
 
-	.conteiner .technologies {
+	/* .conteiner .technologies {
 		grid-area: technologies;
 		display: -moz-grid-group;
 		align-items: center;
 		justify-content: center;		
-	}
+	} */
 
-	.conteiner .technologies .iconTech {
-		/* width: 90%; */
-		margin: 20px auto;
-		display: grid;
-		align-items: center;
-		justify-content: center;
-		grid-gap: 1px; /*espaciados entre cada elemento*/
-		grid-template-columns: repeat(6, 1fr); /* Definimos el no. de columnas que quiero tener. En este caso son 3 */
-		grid-auto-rows: repeat(2, auto); /* Definimos no. de filas y el tamaño en automatico */
-		grid-template-areas: "iconTech iconTech iconTech iconTech iconTech iconTech" /*con grid template areas, determinamos la distribucion y el layout de la app */
-							 "iconTech iconTech iconTech iconTech iconTech iconTech"
-	}
 	
 	.conteiner .widget-1, 
 	.conteiner .widget-2,
@@ -162,6 +156,46 @@ body { /*class .content */
 		color: #fff;
 	    grid-area: footer;
 	}
+
+	.technologies {
+		width: 5%;
+		margin: auto;
+		overflow: hidden;
+		grid-gap: 0px;
+	}
+	
+	.technologies ul {
+		display: flex;
+		padding: 0;
+		width: 400%;
+		
+		animation: cambio 8s infinite alternate linear;
+	}
+	
+	.technologies li {
+		width: 100%;
+		list-style: none;
+	}
+	
+	.technologies img {
+		width: 100%;
+	}
+	
+	@keyframes cambio {
+		0% {margin-left: 0;}
+		20% {margin-left: 0;}
+		
+		25% {margin-left: -100%;}
+		45% {margin-left: -100%;}
+		
+		50% {margin-left: -200%;}
+		70% {margin-left: -200%;}
+		
+		75% {margin-left: -300%;}
+		100% {margin-left: -300%;}
+	}
+	
+	
 	
 	/*** RESPONSIVE ***/
 
