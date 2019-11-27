@@ -105,10 +105,14 @@ body { /*class .content */
 		grid-area: sidebar;
 	  
 	}
+/* 
+	ul {
+		list-style-type: disc;
+	} */
 
 	.conteiner .technologies {
 		grid-area: technologies;
-		display: -moz-grid-group;
+		display: grid;
 		align-items: center;
 		justify-content: center;		
 	}
@@ -121,7 +125,7 @@ body { /*class .content */
 		justify-content: center;
 		grid-gap: 1px; /*espaciados entre cada elemento*/
 		grid-template-columns: repeat(6, 1fr); /* Definimos el no. de columnas que quiero tener. En este caso son 3 */
-		grid-auto-rows: repeat(2, auto); /* Definimos no. de filas y el tamaño en automatico */
+		grid-auto-rows: repeat(2, center); /* Definimos no. de filas y el tamaño en automatico */
 		grid-template-areas: "iconTech iconTech iconTech iconTech iconTech iconTech" /*con grid template areas, determinamos la distribucion y el layout de la app */
 							 "iconTech iconTech iconTech iconTech iconTech iconTech"
 	}
