@@ -1,143 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="sass/test.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <title>Tania E Juarez</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tania E Juarez</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
-    <header class="header">
-        <nav class="navbar">
-          <a class="logo" href="#">Tania Juarez</a>
-          <input type="checkbox" id="nav" class="hidden">
-          <label for="nav" class="nav-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-           </label>
-          <div class="wrapper">
-            <ul class="menu">
-              <!-- <li class="menu-item"><a href="#">Home</a></li> -->
-              <li class="menu-item"><a href="#">Conoceme</a></li>
-              <li class="menu-item"><a href="#">Proyectos</a></li>
-              <!-- <li class="menu-item"><a href="#">Service</a></li>
-              <li class="menu-item"><a href="#">Works</a></li> -->
-              <li class="menu-item"><a href="#">Contacto</a></li>
-            </ul>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Conóceme</a></li>
+      <li><a href="#portfolio">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="container-all">
+    <div class="welcome" id="home">
+      <button class="menu-button">
+          <svg class="hamburger" x="0px" y="0px"
+          viewBox="0 0 30 17" height="17" width="30" >
+            <g transform="translate(-15 -15)">
+              <rect x="15" y="16" class="st0" width="30" height="2"/>
+            </g>
+            <g transform="translate(-15 -9)">
+              <rect x="15" y="16" class="st0" width="30" height="2"/>
+            </g>
+            <g transform="translate(-15 -3)">
+              <rect x="15" y="16" class="st0" width="30" height="2"/>
+            </g>
+          </svg>
+          <svg class="close-icon" x="0px" y="0px"
+          viewBox="0 0 30 17" height="17" width="30">
+       <g transform="translate(-15 -15)">
+         <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+           35.8,16.5 37,17.7 	"/>
+       </g>
+       </svg>      
+      </button>
+
+      <h1>Bienvenido<span>Tania E. Juarez</span></h1>
+    </div>
+
+    <section class="intro">
+      <div class="intro-left">
+        <img src="img/intro-01.png" alt="a laptop on a wood table">
+      </div>
+      <div class="intro-middle">
+        <h2>Haz que las cosas sucedan</h2>
+        <p>Administradora de PROFESIÓN. Desarrolladora por PASIÒN.</p>
+      </div>
+      <div class="intro-right">
+        <img src="img/intro-02.png" alt="two computers and a laptop on a table">
+      </div>
+    </section>
+
+    <section class="about-me" id="about">
+      <img class="about-img" src="img/IMG_6384.png" alt="A picture of Joe Portfolio">
+      <h1 class="about-title">Tania Juárez</h1>
+      <h2 class="about-subtitle">Desarrolladora Front End</h2>
+      <div class="about-text" align="justify">
+        <p>Soy autodidacta, resiliente, y abierta al cambio. Descubrí en el código unas de mis más grandes pasiones, lo que me permite crear soluciones y productos innovadores, oportunos y funcionales.</p>
+        <p>Me gusta trabajar bajo marcos ágiles y sumar al equipo de trabajo, haciendo uso de mis habilidades sociales. Soy colaboradora y me adapto al entorno.</p>
+        <p>Para mí los retos representan una oportunidad de aprendizaje y mejora continua.</p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h1>Proyectos</h1>
+      <div class="portfolio-items">
+
+        <!-- Portfolio item 1 -->
+        <figure class="portfolio-item">
+          <img class="portfolio-image" src="https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">Pandemonium</h2>
+            <p class="portfolio-desc">Progressive Web App que permite levantar las comandas en este restaurante vegano.</p>
+            <a href="#" class="portfolio-link">Mas info</a>
+          </figcaption>
+          
+          <!-- Portfolio modal 1 -->
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px"
+                viewBox="0 0 30 17" height="17" width="30">
+                <g transform="translate(-15 -15)">
+                <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+                35.8,16.5 37,17.7 	"/>
+                </g>
+            </svg>
+           </button>
+            <div class="portfolio-header header-one">
+              <div class="portfolio-title-box">
+                <h2 class="portfolio-title">Pandemonium</h2>    
+                <p class="portfolio-subtitle">Progressive Web App</p>
+                <a href="#" class="portfolio-link">Código</a>                             <a href="#" class="portfolio-link">Demo</a>
+              </div>
+            </div> <!-- / portfolio-header -->
+            <div class="portfolio-content">
+               <p>Progressive Web App que permite levantar las comandas en este restaurante vegano.</p>
+               <img class="portfolio-full-width" src="https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg" alt="an image"> 
+               <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+               <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+               <img class="portfolio-pull-left" src="https://user-images.githubusercontent.com/51424259/69590629-b053ca80-0fb5-11ea-8e3e-e43f06a5e73c.png" alt="an image"> 
+               <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+               <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+               <!-- <img class="portfolio-pull-right" src="img/portfolio-01.jpg" alt="an image">  -->
+
+              </div>
           </div>
-        </nav>
-    </header>
+          <!-- /modal -->
+        </figure>
 
-    <div class="icon-bar">
-            <a href="https://www.linkedin.com/in/TaniaEJuarez" target="_blank" class="linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/TaniaEJuarez" target="_blank" class="github"><i class="fa fa-github" title="GitHub"></i></a> 
-            <a href="mailto:telizabethjdiaz@gmail.com" target="_blank" class="google"><i class="fa fa-google" title="Gmail"></i></a> 
-            <a href="https://api.whatsapp.com/send?phone=525513821695&text=Hola%20Tania!%20Mi%20nombre%20es" target="_blank" class="whatsapp" title="WhatsApp"><i class="fa fa-whatsapp"></i></a> 
-    </div>
-    <section id="home">
+        <!-- Portfolio item 2 -->
+        <figure class="portfolio-item">
+            <img class="portfolio-image" src="https://user-images.githubusercontent.com/51424259/69761973-8d98f180-112e-11ea-853c-2ee5759ca061.jpg" alt="portfolio item">
+            <figcaption>
+              <h2 class="portfolio-title">LabCar</h2>
+              <p class="portfolio-desc">Diseño y maquetación de una Landing Page que permite solicitar el servicio de taxi en cualquier momento.</p>
+              <a href="#" class="portfolio-link">Mas info</a>
+            </figcaption>
+            <div class="portfolio-modal">
+                <button class="modal-close">
+                  <svg x="0px" y="0px"
+                    viewBox="0 0 30 17" height="17" width="30">
+                    <g transform="translate(-15 -15)">
+                    <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+                    35.8,16.5 37,17.7 	"/>
+                    </g>
+                </svg>
+               </button>
+                <div class="portfolio-header header-two">
+                  <div class="portfolio-title-box">
+                    <h2 class="portfolio-title">LabCar</h2>    
+                    <p class="portfolio-subtitle">Landing Page</p>
+                  </div>
+                </div> <!-- / portfolio-header -->
+                <div class="portfolio-content">
+                  <p>Diseño y maquetación de una Landing Page que permite solicitar el servicio de taxi en cualquier momento.</p>
+                  <img class="portfolio-full-width" src="https://user-images.githubusercontent.com/51424259/69761973-8d98f180-112e-11ea-853c-2ee5759ca061.jpg" alt="an image"> 
+                   <!-- <p>Diseño y maquetación de una Landing Page que permite solicitar el servicio de taxi en cualquier momento.</p> -->
+                   <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+                   <img class="portfolio-pull-left" src="https://user-images.githubusercontent.com/51424259/69591399-42f56900-0fb8-11ea-89ff-04fdae981221.png" alt="an image"> 
+                   <!-- <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p> -->
+                   <!-- <img class="portfolio-pull-right" src="https://user-images.githubusercontent.com/51424259/69761973-8d98f180-112e-11ea-853c-2ee5759ca061.jpg" alt="an image">  -->
+                  </div>
+              </div>
+          </figure>
 
-    </section>
+          <!-- Portfolio item 3 -->
+        <!-- <figure class="portfolio-item">
+            <img class="portfolio-image" src="img/portfolio-03.jpg" alt="portfolio item">
+            <figcaption>
+              <h2 class="portfolio-title">Project Name</h2>
+              <p class="portfolio-desc">A short description could go right here</p>
+              <a href="#" class="portfolio-link">More info</a>
+            </figcaption>
+          </figure> -->
 
-    <section id="about-me">
-    <p>Ser resiliente y autodidacta, me han permitido iniciar con éxito mi carrera como Front End. <br>
-        Me gusta hacer de los retos una oportunidad de aprendizaje y mejora continua</p>
-    </section>
+          <!-- Portfolio item 4 -->
+        <!-- <figure class="portfolio-item">
+            <img class="portfolio-image" src="img/portfolio-04.jpg" alt="portfolio item">
+            <figcaption>
+              <h2 class="portfolio-title">Project Name</h2>
+              <p class="portfolio-desc">A short description could go right here</p>
+              <a href="#" class="portfolio-link">More info</a>
+            </figcaption>
+          </figure> -->
 
-    <section id="soft-skills">
-    <div>
-        <img src="./assets/SoftSkills.png" alt="">
-        <ul>
-            <li>Adaptabilidad</li>
-            <li>Proactividad</li>
-            <li>Colaboración</li>
-            <li>Resiliencia</li>
-            <li>Autodidacta</li>
-            <li>Trabajo bajo marcos ágiles</li>
-        </ul>
-    </div>
-    </section>
+          <!-- Portfolio item 5 -->
+        <!-- <figure class="portfolio-item featured">
+            <img class="portfolio-image" src="img/portfolio-05.jpg" alt="portfolio item">
+            <figcaption>
+              <h2 class="portfolio-title">Project Name</h2>
+              <p class="portfolio-desc">A short description could go right here</p>
+              <a href="#" class="portfolio-link">More info</a>
+            </figcaption>
+          </figure> -->
 
-    <section id="technologies">
-        <div class="w3-content w3-section" style="max-width:100px">
-            <img class="myTechnologies" src="https://icongr.am/devicon/javascript-original.svg" title="Javascript" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/html5-original.svg" title="HTML 5" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/css3-original.svg" title="CSS 3" style="width:100%">
-            <img class="myTechnologies" src="./assets/React.png" title="React" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/nodejs-original-wordmark.svg" title="Node JS" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/git-original.svg" title="Git" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/github-original.svg" title="GitHub" style="width:100%">
-            <img class="myTechnologies" src="./assets/Firebase.png" title="Firebase" style="width:100%">
-            <img class="myTechnologies" src="./assets/marvel.png" title="Marvel" style="width:100%">
-            <img class="myTechnologies" src="./assets/materialize.png" title="Materialize" style="width:100%">
-            <img class="myTechnologies" src="https://icongr.am/devicon/mongodb-original.svg" title="MongoDB" style="width:100%">
-            <img class="myTechnologies" src="./assets/http___pluspng.com_img-png_bootstrap-logo-png-open-2000.png" title="Bootstrap" style="width:100%">
-            <img class="myTechnologies" src="./assets/sass.png" title="Sass" style="width:100%">
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                            <img src="https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg" alt="Avatar" style="width:300px;height:200px;">Pandemonium
-                </div>
-                <div class="flip-card-back">
-                    <h1>Pandemonium</h1> <br>
-                    <p>Progressive Web App que permite levantar las comandas en este
-                        restaurante vegano. Elaborado con React JS, bootstrap y firebase.javascript, html css </p> <br> <br>
-                        <div style="margin: 24px 0;"> <!--cambiar a por img para colocar iconos de tecnologias usadas -->
-                            <img src="https://icongr.am/devicon/javascript-original.svg" alt="">
-                            <img src="https://icongr.am/devicon/html5-original.svg" alt="">
-                            <img src="https://icongr.am/devicon/css3-original.svg" alt="">
-                            <img src="./assets/React.png" alt="" style="width: 35px; height: 35px">
-                            <img src="./assets/http___pluspng.com_img-png_bootstrap-logo-png-open-2000.png" alt="" style="width: 35px; height: 35px">
-                            <a href="https://github.com/TaniaEJuarez/Pandmonium.git" class="btn btn-code" target="_blank">Código</a>
-                            <a href="https://mercedesdavila.github.io/Pandmonium/" class="btn btn-demo" target="_blank">Demo</a>
-
-             
-                        </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                                <img src="https://user-images.githubusercontent.com/51424259/69761973-8d98f180-112e-11ea-853c-2ee5759ca061.jpg" alt="Avatar" style="width:300px;height:200px;">LabCar
-                            </div>
-                    <div class="flip-card-back">
-                        <h1>LabCar</h1> <br>
-                        <p>Diseño y maquetación de una Landing Page que permite solicitar
-                             el servicio de taxi en cualquier momento.</p> <br> <br>
-                            <div style="margin: 24px 0;"> <!--cambiar a por img para colocar iconos de tecnologias usadas -->
-                                <img src="https://icongr.am/devicon/javascript-original.svg" alt="">
-                                <img src="https://icongr.am/devicon/html5-original.svg" alt="">
-                                <img src="https://icongr.am/devicon/css3-original.svg" alt="">
-                                <a href="https://github.com/TaniaEJuarez/LabCar.git" class="btn btn-code" target="_blank">Código</a>
-                                <a href="https://taniaejuarez.github.io/LabCar/" class="btn btn-demo" target="_blank">Demo</a>
-              
-                            </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section id="keep-in-touch">
-        <a class="link" href="./assets/TaniaEJuarez_CV.pdf" target="_blank">
-        <button type="button" class="downloadCV">Descarga Mi CV</button></a>
-    </section>
-
-    <section id="footer">
+      </div>
 
     </section>
 
-    <script src="main.js"></script>
-</body>
+    <section class="contact" id="contact">
+      <h1>Contáctame</h1>
+      <form action="">
+        <label class="name" class="name">Nombre:
+            <input type="text" id="name">
+        </label>
+        
+        <label class="email" class="email">Email:
+          <input type="email" id="email">
+        </label>
+
+        <label message="message" class="message">Mensaje:
+          <textarea name="" id="message"></textarea>
+        </label>
+
+        <input class="button form-button" type="submit" value="ENVIAR">
+
+      </form>
+    </section>
+
+    <footer>
+      <p>Sígueme</p>
+      <div class="social-icons">
+        <!-- <img class="social-icon" src="img/twitter.svg" alt="twitter">
+        <img class="social-icon" src="img/instagram.svg" alt="twitter">
+        <img class="social-icon" src="img/github.svg" alt="twitter">       -->
+
+        <a href="https://www.linkedin.com/in/TaniaEJuarez" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/TaniaEJuarez" target="_blank" class="social-icon"><i class="fa fa-github" title="GitHub"></i></a> 
+            <a href="mailto:telizabethjdiaz@gmail.com" target="_blank" class="social-icon"><i class="fa fa-google" title="Gmail"></i></a> 
+            <a href="https://api.whatsapp.com/send?phone=525513821695&text=Hola%20Tania!%20Mi%20nombre%20es" target="_blank" class="social-icon" title="WhatsApp"><i class="fa fa-whatsapp"></i></a> 
+      </div>
+      
+      <p class="copyright">Copyright 2017 Tania E Juarez</p>
+    </footer>
+  </div>
+  <script src="js/nav.js"></script>
+  <script src="js/modal.js"></script>
+  
+</body> 
 </html>
